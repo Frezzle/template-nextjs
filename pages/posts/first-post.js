@@ -1,3 +1,10 @@
+import Link from "next/link";
+
 export default function FirstPost() {
-  return <h1>First Post</h1>;
+  return (
+    <>
+      <Link href="/">Go back home</Link>
+      <h1>First Post</h1>
+    </>
+  );
 }
