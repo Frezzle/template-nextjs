@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@vercel/analytics': 0.1.11
   date-fns: 2.29.3
   gray-matter: 4.0.3
   next: 13.2.3
@@ -10,6 +11,7 @@ specifiers:
   remark-html: 15.0.2
 
 dependencies:
+  '@vercel/analytics': 0.1.11_react@18.2.0
   date-fns: 2.29.3
   gray-matter: 4.0.3
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
@@ -175,6 +177,14 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: false
+
+  /@vercel/analytics/0.1.11_react@18.2.0:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /argparse/1.0.10:
