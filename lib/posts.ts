@@ -24,6 +24,7 @@ export function getSortedPostsData() {
     return {
       id,
       ...matterResult.data,
+      date: matterResult.data.date, // satisfy typescript compiler :/ need to learn better way
     };
   });
   // Sort posts by date
