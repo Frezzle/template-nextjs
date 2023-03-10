@@ -7,7 +7,13 @@ import Link from 'next/link';
 const name = 'Frederico Mazzone';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  children: React.ReactNode;
+  /** Whether home page or not. */
+  home?: boolean;
+};
+
+export default function Layout(props: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +32,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {props.home ? (
           <>
             <Image
               priority
@@ -58,8 +64,8 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
-      {!home && (
+      <main>{props.children}</main>
+      {!props.home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
