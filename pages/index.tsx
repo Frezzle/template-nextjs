@@ -36,6 +36,13 @@ export default function Home(props: HomeProps) {
       <section className={`${utilStyles['headingMd']} ${utilStyles['padding1px']}`}>
         <h2 className={utilStyles['headingLg']}>Blog</h2>
         <ul className={utilStyles['list']}>
+          <li className={utilStyles['listItem']} key='custom-post'>
+            <Link href={'/posts/custom-post'}>Custooooom Post</Link>
+            <br />
+            <small className={utilStyles['lightText']}>
+              <Date dateString='2023-03-13' />
+            </small>
+          </li>
           {props.allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles['listItem']} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
