@@ -15,7 +15,7 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles['container']}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,18 +31,18 @@ export default function Layout(props: LayoutProps) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className={styles['header']}>
         {props.home ? (
           <>
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className={utilStyles['borderCircle']}
               height={144}
               width={144}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles['heading2Xl']}>{name}</h1>
           </>
         ) : (
           <>
@@ -50,14 +50,14 @@ export default function Layout(props: LayoutProps) {
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
+                className={utilStyles['borderCircle']}
                 height={108}
                 width={108}
                 alt=""
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
+            <h2 className={utilStyles['headingLg']}>
+              <Link href="/" className={utilStyles['colorInherit']}>
                 {name}
               </Link>
             </h2>
@@ -66,7 +66,7 @@ export default function Layout(props: LayoutProps) {
       </header>
       <main>{props.children}</main>
       {!props.home && (
-        <div className={styles.backToHome}>
+        <div className={styles['backToHome']}>
           <Link href="/">← Back to home</Link>
         </div>
       )}

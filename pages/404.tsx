@@ -8,8 +8,8 @@ export default function Custom404() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <h2 className={utilStyles.headingLg}>I can't find it, you sure I borrowed it?</h2>
+      <section className={utilStyles['headingMd']}>
+        <h2 className={utilStyles['headingLg']}>I can't find it, you sure I borrowed it?</h2>
       </section>
     </Layout>
   );
