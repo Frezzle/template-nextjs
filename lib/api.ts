@@ -3,9 +3,11 @@
 // without having to call the generated API Routes in `pages/api`.
 // The `pages/api` routes will also call these.
 
-export default {
+const api = {
   getHealth: async function() {
     // call external thing e.g. API, DB
     return true;
   }
-}
+};
+
+export default api;

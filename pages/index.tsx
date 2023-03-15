@@ -26,7 +26,7 @@ export default function Home(props: HomeProps) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles['headingMd']}>
-        <p>Fred here, Next.js'ing 🤙</p>
+        <p>{"Fred here, Next.js'ing 🤙"}</p>
         <p>
           (This is a sample website built using
           {' '}
