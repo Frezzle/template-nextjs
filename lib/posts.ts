@@ -7,16 +7,16 @@ import html from 'remark-html';
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export type PostList = {
-  id: string,
-  title: string,
-  date: string,
+  id: string;
+  title: string;
+  date: string;
 }[];
 
 export type PostData = {
-  id: string,
-  title: string,
-  date: string,
-  contentHtml: string,
+  id: string;
+  title: string;
+  date: string;
+  contentHtml: string;
 };
 
 export function getPostList(): PostList {
@@ -31,8 +31,10 @@ export function getPostList(): PostList {
     const matterResult = matter(fileContents);
 
     const { title, date } = matterResult.data;
-    if (typeof title !== 'string') throw new Error('title missing in ' + fullPath);
-    if (typeof date !== 'string') throw new Error('date missing in ' + fullPath);
+    if (typeof title !== 'string')
+      throw new Error('title missing in ' + fullPath);
+    if (typeof date !== 'string')
+      throw new Error('date missing in ' + fullPath);
 
     // Combine the data with the id
     return {
@@ -64,13 +66,14 @@ export async function getPostData(id: string): Promise<PostData> {
   const matterResult = matter(fileContents);
 
   const { title, date } = matterResult.data;
-  if (typeof title !== 'string') throw new Error('title missing in ' + fullPath);
+  if (typeof title !== 'string')
+    throw new Error('title missing in ' + fullPath);
   if (typeof date !== 'string') throw new Error('date missing in ' + fullPath);
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
-  .use(html)
-  .process(matterResult.content);
+    .use(html)
+    .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
   // Combine the data with the id and contentHtml

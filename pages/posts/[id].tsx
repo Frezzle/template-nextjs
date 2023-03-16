@@ -22,14 +22,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   //   }
   // ]
   const paths = ids.map((id) => ({ params: { id } }));
-  
+
   return {
     paths,
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps = async({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params?.['id'] || typeof params['id'] !== 'string') {
     return {
       props: {
@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async({ params }) => {
 };
 
 export type PostProps = {
-  postData: PostData,
+  postData: PostData;
 };
 
 export default function Post({ postData }: PostProps) {

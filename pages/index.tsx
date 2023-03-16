@@ -13,11 +13,11 @@ export const getStaticProps: GetStaticProps = async () => {
       allPostsData,
     },
   };
-}
+};
 
 type HomeProps = {
-  allPostsData: PostList,
-}
+  allPostsData: PostList;
+};
 
 export default function Home(props: HomeProps) {
   return (
@@ -28,19 +28,20 @@ export default function Home(props: HomeProps) {
       <section className={utilStyles['headingMd']}>
         <p>{"Fred here, Next.js'ing 🤙"}</p>
         <p>
-          (This is a sample website built using
-          {' '}
+          (This is a sample website built using{' '}
           <a href="https://nextjs.org/learn">the Next.js tutorial</a>)
         </p>
       </section>
-      <section className={`${utilStyles['headingMd']} ${utilStyles['padding1px']}`}>
+      <section
+        className={`${utilStyles['headingMd']} ${utilStyles['padding1px']}`}
+      >
         <h2 className={utilStyles['headingLg']}>Blog</h2>
         <ul className={utilStyles['list']}>
-          <li className={utilStyles['listItem']} key='custom-post'>
+          <li className={utilStyles['listItem']} key="custom-post">
             <Link href={'/posts/custom-post'}>Custooooom Post</Link>
             <br />
             <small className={utilStyles['lightText']}>
-              <Date dateString='2023-03-13' />
+              <Date dateString="2023-03-13" />
             </small>
           </li>
           {props.allPostsData.map(({ id, date, title }) => (
@@ -50,7 +51,7 @@ export default function Home(props: HomeProps) {
               <small className={utilStyles['lightText']}>
                 <Date dateString={date} />
               </small>
-            </li>          
+            </li>
           ))}
         </ul>
       </section>

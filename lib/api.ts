@@ -4,10 +4,10 @@
 // The `pages/api` routes will also call these.
 
 const api = {
-  getHealth: async function() {
+  getHealth: async function () {
     // call external thing e.g. API, DB
     return true;
-  }
+  },
 };
 
 export default api;

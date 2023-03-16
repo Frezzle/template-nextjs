@@ -11,7 +11,7 @@ interface LayoutProps {
   children: React.ReactNode;
   /** Whether home page or not. */
   home?: boolean;
-};
+}
 
 export default function Layout(props: LayoutProps) {
   return (
