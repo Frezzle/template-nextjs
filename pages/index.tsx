@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Date from 'components/date';
 import Layout, { siteTitle } from 'components/layout';
-import utilStyles from 'styles/utils.module.css';
+import utilStyles from 'styles/utils.module.scss';
 import { PostList, getPostList } from 'lib/posts';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -27,6 +27,7 @@ export default function Home(props: HomeProps) {
       </Head>
       <section className={utilStyles['headingMd']}>
         <p>{"Fred here, Next.js'ing 🤙"}</p>
+        <p className={utilStyles['scss-example']}>This paragraph uses scss!</p>
         <p>
           (This is a sample website built using{' '}
           <a href="https://nextjs.org/learn">the Next.js tutorial</a>)

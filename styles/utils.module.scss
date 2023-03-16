@@ -50,3 +50,8 @@
 .lightText {
   color: #666;
 }
+
+$primary: rgb(85, 190, 120);
+.scss-example {
+  color: $primary;
+}
