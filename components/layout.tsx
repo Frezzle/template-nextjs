@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from 'styles/utils.module.scss';
+// import utilStyles from 'styles/utils.module.scss';
 import Link from 'next/link';
 
-const name = 'Frederico Mazzone';
 export const siteTitle = 'Next.js Sample Website';
 
 interface LayoutProps {
@@ -15,7 +14,7 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   return (
-    <div className={styles['container']}>
+    <div className="container mx-auto p-3">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,40 +30,43 @@ export default function Layout(props: LayoutProps) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles['header']}>
-        {props.home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles['borderCircle']}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles['heading2Xl']}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles['borderCircle']}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles['headingLg']}>
-              <Link href="/" className={utilStyles['colorInherit']}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+
+      <header className="flex py-3 justify-between items-center">
+        <Link href="/">
+          <Image
+            src="/images/logo.png"
+            height={50}
+            width={107}
+            alt="fred logo"
+          />
+        </Link>
+        <nav className="hidden md:flex space-x-10">
+          <Link href="/product" className="hover:text-blue-800">
+            Product
+          </Link>
+          <Link href="#" className="hover:text-blue-800">
+            Projects
+          </Link>
+          <Link href="#" className="hover:text-blue-800">
+            Blog
+          </Link>
+          <Link href="#" className="hover:text-blue-800">
+            Garden
+          </Link>
+          <Link href="#" className="hover:text-blue-800">
+            About
+          </Link>
+        </nav>
+        <a
+          href="#"
+          className="hidden md:block bg-cyan-900 text-slate-200 py-2 px-4 rounded-full hover:bg-cyan-800"
+        >
+          Contact
+        </a>
       </header>
+
       <main>{props.children}</main>
+
       {!props.home && (
         <div className={styles['backToHome']}>
           <Link href="/">← Back to home</Link>
