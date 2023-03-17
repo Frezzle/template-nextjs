@@ -28,6 +28,7 @@ export default function Home(props: HomeProps) {
       <section className={utilStyles['headingMd']}>
         <p>{"Fred here, Next.js'ing 🤙"}</p>
         <p className={utilStyles['scss-example']}>This paragraph uses scss!</p>
+        <p className="font-bold underline">This paragraph uses tailwind!</p>
         <p>
           (This is a sample website built using{' '}
           <a href="https://nextjs.org/learn">the Next.js tutorial</a>)
