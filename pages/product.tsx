@@ -105,7 +105,62 @@ export default function Product() {
           </div>
         </div>
       </section>
-      {/* TODO testimonials */}
+      <section id="testimonials">
+        <h2 className="font-bold text-3xl md:mt-32 mb-24 text-center flex flex-col md:block lg:text-4xl">
+          <span>❤️</span> <span>Meet some of our happy customers</span>{' '}
+          <span className="hidden md:inline">❤️</span>
+        </h2>
+        <div className="space-y-16 lg:flex lg:space-y-0 lg:space-x-7">
+          <div className="bg-gray-100 flex flex-col items-center p-8 rounded-md relative">
+            <Image
+              src="/images/ai-portrait-1.webp"
+              height="70"
+              width="70"
+              alt="AI-generated image of young white woman with blue eyes, long eyelashes and pink puffy hair"
+              className="rounded-full absolute -top-10"
+            />
+            <div className="font-bold mt-2">Alexa Robotson</div>
+            <div className="text-sm">Head of Sales, Alphabetify</div>
+            <p className="mt-8 italic text-gray-400">
+              &quot;Thanks to The Thing, our business managed to come from the
+              brink of failure, overnight! I cannot imagine anything else having
+              had such a positive effect.&quot;
+            </p>
+          </div>
+          <div className="bg-gray-100 flex flex-col items-center p-8 rounded-md relative">
+            <Image
+              src="/images/ai-portrait-2.webp"
+              height="70"
+              width="70"
+              alt="AI-generated image of young black man in a suit with a goatee and short blonde hair"
+              className="rounded-full absolute -top-10"
+            />
+            <div className="font-bold mt-2">Billie Mechanos</div>
+            <div className="text-sm">Director of Profit, GoogleyBoo</div>
+            <p className="mt-8 italic text-gray-400">
+              &quot;They said it could not be done, but here we are; for the
+              first time in my life I was able to do the thing without a sweat.
+              All thanks to The Thing!&quot;
+            </p>
+          </div>
+          <div className="bg-gray-100 flex flex-col items-center p-8 rounded-md relative">
+            <Image
+              src="/images/ai-portrait-3.webp"
+              height="70"
+              width="70"
+              alt="AI-generated image of young black woman with brown eyes, large curly brown afro and exposed shoulder"
+              className="rounded-full absolute -top-10"
+            />
+            <div className="font-bold mt-2">Cali A. Isaac</div>
+            <div className="text-sm">Innovation Specialist, WEF</div>
+            <p className="mt-8 italic text-gray-400">
+              &quot;Only once in a lifetime do you come across something so
+              ground-breaking. Stop reading this, just buy it. You will not
+              regret it for a second.&quot;
+            </p>
+          </div>
+        </div>
+      </section>
       {/* TODO CTA */}
       {/* TODO footer */}
       {/* https://youtu.be/dFgzHOX84xQ?t=2701 */}
