@@ -44,17 +44,8 @@ export default function Layout(props: LayoutProps) {
           <Link href="/product" className="hover:text-blue-800">
             Product
           </Link>
-          <Link href="#" className="hover:text-blue-800">
-            Projects
-          </Link>
-          <Link href="#" className="hover:text-blue-800">
-            Blog
-          </Link>
-          <Link href="#" className="hover:text-blue-800">
-            Garden
-          </Link>
-          <Link href="#" className="hover:text-blue-800">
-            About
+          <Link href="/guestbook" className="hover:text-blue-800">
+            Guestbook
           </Link>
         </nav>
         <a
