@@ -11,7 +11,7 @@
 Initial setup:
 
 1. Create postgres DB in https://railway.app.
-2. Set `DATABASE_URL` in `.env`.
+2. Set `DATABASE_URL` in `.env` and set file to only be readable/writeable by me `chmod 600 .env`.
 3. Delete `prisma/migrations` folder, I think (temporarily move if unsure).
 4. Edit DB schema to what you want: `prisma/schema.prisma`.
 5. Apply your schema to DB: `pnpx prisma migrate dev --name init`.
