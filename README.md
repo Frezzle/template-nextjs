@@ -1,6 +1,12 @@
 # Next.js app template
 
-## DB setup
+## Deploy new repo
+
+1. Create new repo from [this template project](https://github.com/Frezzle/template-nextjs); "use this template" -> "create new repo".
+2. Deploy to vercel by linking to new repo.
+3. Set Vercel serverless funcs to same region as DB (or close). Railway only has US-West region right now, so make it sfo1 (san francisco); this should be [configured already](./vercel.json).
+
+## Set up DB
 
 Initial setup:
 
