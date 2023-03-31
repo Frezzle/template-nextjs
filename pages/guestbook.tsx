@@ -20,15 +20,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
 };
 
 type GuestbookProps = {
+  // FYI: Using the Comment type from prisma does not seem to expose any DB structures nor connection info,
+  // AFAICT from inspecting the data returned by the production deployment.
   comments: Comment[];
 };
 
-// TODO by using this Comment type from prisma, am I exposing any sensitive DB stuff to the web browser? check prod deployment.
-// I don't think I am because the prisma client complains if used in frontend (which I fixed),
-// and only that should have any knowledge of the DB connection.
-// As for DB types, that's not necessarily bad, but I don't want that info shared ideally as it helps hackers figure out
-// how best to manipulate DB or SQL inject maybe; the DB types get imported and used in here (in props) for type-checking,
-// but I don't think that makes it to the client after TS is compiled to JS. I'll check though.
 export default function Guestbook(props: GuestbookProps) {
   const [posting, setPosting] = useState(false);
   const [postingFailed, setPostingFailed] = useState(false);
