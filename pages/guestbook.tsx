@@ -36,12 +36,10 @@ export default function Guestbook(props: GuestbookProps) {
     fetch('/api/comments', { body: JSON.stringify({ text }), method: 'POST' }) // TODO try without stringify and inspect network tab; is it really needed?
       .then((res) => res.json())
       .then((comment: Comment) => {
-        console.log('success', comment);
         setAllComments([comment, ...allComments]);
         setText('');
       })
-      .catch((err) => {
-        console.log('err', err);
+      .catch(() => {
         setPostingFailed(true);
       })
       .finally(() => {
