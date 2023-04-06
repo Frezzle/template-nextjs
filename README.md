@@ -21,3 +21,11 @@ Every time you change the DB schema:
 
 - Generate/apply a new migration: `pnpx prisma migrate dev --name MIGRATION_NAME`. This also re-generates the prisma client.
 - If you need to re-generate the prisma client without migrating: `pnpx prisma generate`.
+
+## Set up repo
+
+When cloning this repo, set up a local `.env` file:
+
+```bash
+DATABASE_URL='get this from railway.app'
+```
