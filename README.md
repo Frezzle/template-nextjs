@@ -29,3 +29,14 @@ When cloning this repo, set up a local `.env` file:
 ```bash
 DATABASE_URL='get this from railway.app'
 ```
+
+## Set up IDE
+
+Install VS Codium ideally.
+
+Install extensions of technologies that this repo uses:
+
+- ESLint
+- Prettier
+- Prisma
+- Tailwind CSS IntelliSense
