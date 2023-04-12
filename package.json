@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "1.0.5",
     "@prisma/client": "4.11.0",
     "@vercel/analytics": "0.1.11",
     "date-fns": "2.29.3",
