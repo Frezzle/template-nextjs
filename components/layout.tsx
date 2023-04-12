@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 // import utilStyles from 'styles/utils.module.scss';
 import Link from 'next/link';
+import Header from './header';
 
 export const siteTitle = 'Next.js Sample Website';
 
@@ -31,6 +32,10 @@ export default function Layout(props: LayoutProps) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
+      {/* Header shows sign-in status and sign-in/out button */}
+      <Header />
+
+      {/* TODO: this is 2nd header; another exists inside Header component; resolve */}
       <header className="flex py-3 justify-between items-center">
         <Link href="/">
           <Image

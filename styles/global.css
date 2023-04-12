@@ -8,6 +8,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* html,
 body {
   padding: 0;
@@ -20,15 +29,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 img {
