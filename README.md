@@ -20,6 +20,7 @@ Initial setup:
 Every time you change the DB schema:
 
 - Generate/apply a new migration: `pnpx prisma migrate dev --name MIGRATION_NAME`. This also re-generates the prisma client.
+  - TODO: for safety, find a way to generate the migration separately from applying it, so I can manually check the generated commands.
 - If you need to re-generate the prisma client without migrating: `pnpx prisma generate`.
 
 ## Set up repo
