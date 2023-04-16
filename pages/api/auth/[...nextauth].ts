@@ -5,7 +5,7 @@ import GithubProvider from 'next-auth/providers/github';
 // import TwitterProvider from "next-auth/providers/twitter"
 // import Auth0Provider from "next-auth/providers/auth0"
 // import AppleProvider from "next-auth/providers/apple"
-// import EmailProvider from "next-auth/providers/email"
+import EmailProvider from 'next-auth/providers/email';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { PrismaClient } from '@prisma/client';
 
@@ -17,13 +17,16 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
-    /* EmailProvider({
-         server: process.env.EMAIL_SERVER,
-         from: process.env.EMAIL_FROM,
-       }),
+    // For passwordless sign-in via email.
+    // Requires nodemailer dependency.
+    // https://next-auth.js.org/providers/email
+    EmailProvider({
+      server: process.env.EMAIL_SERVER,
+      from: process.env.EMAIL_FROM,
+    }),
     // Temporarily removing the Apple provider from the demo site as the
     // callback URL for it needs updating due to Vercel changing domains
-
+    /*
     Providers.Apple({
       clientId: process.env.APPLE_ID,
       clientSecret: {
@@ -51,7 +54,7 @@ export const authOptions: NextAuthOptions = {
     //   clientSecret: process.env.TWITTER_SECRET,
     // }),
     // Auth0Provider({
-    //   clientId: process.env.AUTH0_ID,
+    //   clientId: process.env.AUTH0_ID,s
     //   clientSecret: process.env.AUTH0_SECRET,
     //   issuer: process.env.AUTH0_ISSUER,
     // }),
@@ -60,11 +63,22 @@ export const authOptions: NextAuthOptions = {
     logo: 'https://cdn.logo.com/hotlink-ok/logo-social.png',
     // colorScheme: "dark",
   },
+  // https://next-auth.js.org/configuration/options#callbacks
   callbacks: {
     async jwt({ token }) {
       token.userRole = 'admin';
       return token;
     },
+  },
+  // https://next-auth.js.org/configuration/options#session
+  session: {
+    // Strategy for storing the user's session.
+    // Use JWT for all login providers, otherwise it'll default to `database`
+    // (since I have one configured for passwordless login),
+    // which seems to not provide a JWT for email (passwordless) login;
+    // I'd prefer more consistency (having the JWT available always),
+    // so have all sessions as JWTs (not stored in DB I guess?).
+    strategy: 'jwt',
   },
 };
 
