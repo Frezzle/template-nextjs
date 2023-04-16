@@ -80,11 +80,13 @@ Needed for:
 Made up of these:
 
 - Email server: Zoho provides free email forever plan if you have a custom domain already.
-- Email sender: mailjet, register email^ as sender e.g. `noreply@appname.com`.
+  - Admin console: https://mailadmin.zoho.eu
+  - Mailbox: https://mail.zoho.eu
+- Email sender: mailjet, register email^ as a sender.
 
 Setting up:
 
-1. Set up email in Zoho for your custom domain.
+1. Set up email in Zoho for the custom domain. It's all managed in one Zoho account, with my gmail as the super-user; add the custom domain, then [add an email alias](https://mailadmin.zoho.eu/cpanel/home.do#users/20087689120/mailSettings/alias) on that domain. This email alias will be what the app uses to send login emails and email notifications if there are any, so `noreply` is probably not ideal... maybe `hello@appname.com`? Encourage comms from all emails, why not. Can change in futute anyway; one email initially to manage per app is ideal.
 2. Register Zoho in vercel DNS. See Zoho for details.
 3. Set up this^ email as sender in mailjet.
 4. Register mailjet in vercel DNS. See mailjet for details.
