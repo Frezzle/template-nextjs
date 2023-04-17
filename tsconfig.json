@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": false,
     "skipLibCheck": true,
@@ -25,7 +26,7 @@
   "include": [
     "process.d.ts",
     "next-env.d.ts",
-    "next-auth.d.ts",
+    "next-auth-types.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

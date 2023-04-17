@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import api from '../../lib/api';
+import api from 'lib/api';
 
 // TODO api middleware that catches all errors and returns 500.
 // TODO error logging for when the above happens.

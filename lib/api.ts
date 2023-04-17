@@ -3,7 +3,7 @@
 // without having to call the generated API Routes in `pages/api`.
 // The `pages/api` routes will also call these.
 
-import db from './db';
+import db from 'lib/db';
 
 // TODO rename this "api" layer to "service" layer or named after each business domain?
 // Next.js already has API folder, and it's getting confusing.
