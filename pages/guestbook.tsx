@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import Layout from 'components/layout';
+import Layout from '../components/layout';
 import { Comment } from '@prisma/client';
-import api from 'lib/api';
+import api from '../lib/api';
+// TODO import namespaces/aliases for easier absolute imports instead of relative paths.
 
 // Next.js will pre-render this page on each request using the data returned by getServerSideProps.
 // https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props

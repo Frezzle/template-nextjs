@@ -1,10 +1,10 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Date from 'components/date';
-import Layout, { siteTitle } from 'components/layout';
-import utilStyles from 'styles/utils.module.scss';
-import { PostList, getPostList } from 'lib/posts';
+import Date from '../components/date';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.scss';
+import { PostList, getPostList } from '../lib/posts';
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getPostList();
