@@ -20,10 +20,15 @@ export const authOptions: NextAuthOptions = {
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
     }),
+    // FYI: Google OAuth supports multiple callback URLs,
+    // so one google app can be set up for multiple environments,
+    // each with their own callback URL.
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
+    // FYI: GitHub does not supports multiple callback URLs.
+    // You must set up one github app per environment/callback-URL.
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
