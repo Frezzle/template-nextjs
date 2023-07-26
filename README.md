@@ -6,6 +6,12 @@ The intention is that this template will offer the option to use many different 
 
 🏗️ This is still a work-in-progress and not yet easy to use.
 
+Template home page, with working auth and blog:
+![](./preview1.png)
+
+Template product page:
+![](./preview2.png)
+
 ## Set up IDE
 
 Install VS Codium ideally.
