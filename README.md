@@ -1,4 +1,10 @@
-# Next.js app template
+# Next.js web app template
+
+An opinionated template for making Next.js web apps.
+
+The intention is that this template will offer the option to use many different things that a web app may need (e.g. DB, ORM, DB migrations, email sender, auth, etc) and you would then remove the parts that your app doesn't need. The remaining parts would then be configured e.g. following configuration steps using your own custom domain, defining the values of secrets for different services, and more.
+
+🏗️ This is still a work-in-progress and not yet easy to use.
 
 ## Set up IDE
 
